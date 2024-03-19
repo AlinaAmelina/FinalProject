@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="@color/gray">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/dark"
+        android:text="Balance:"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:paddingHorizontal="15dp"
+        android:paddingTop="20dp"
+        android:gravity="center_vertical"/>
+
+    <TextView
+        android:id="@+id/balanceText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/dark"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:paddingHorizontal="15dp"
+        android:paddingBottom="20dp"
+        android:gravity="center_vertical"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:textColor="@color/white"
+        android:text="History:"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/dark"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:background="@color/light_gray"
+        android:layout_marginBottom="10dp">
+
+        <LinearLayout
+            android:id="@+id/historyList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"/>
+    </ScrollView>
+
+    <EditText
+        android:id="@+id/amountInput"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginHorizontal="10dp"
+        android:background="@color/light_gray"
+        android:paddingHorizontal="10dp"
+        android:inputType="number"
+        android:hint="Enter the amount"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/addIncomeBtn"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="Add income"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="5dp"
+            android:backgroundTint="@color/special_green"/>
+
+        <Button
+            android:id="@+id/addExpenseBnt"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="Add expense"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="15dp"
+            android:backgroundTint="@color/special_red"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/undoBtn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Undo the last change in balance"
+        android:layout_marginTop="5dp"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginBottom="15dp"
+        android:backgroundTint="@color/creme_gray"/>
+</LinearLayout>
